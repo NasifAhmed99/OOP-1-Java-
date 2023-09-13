@@ -1,0 +1,148 @@
+
+
+Nasif Ahmed
+20-42403-1
+
+
+
+
+
+
+Library class:
+
+//////////////////////
+
+
+ public class Library
+
+{
+	
+	public Book book ;
+	public String name ;
+	public String address ;  
+	
+	
+	public Library()
+	{
+		
+	}
+	public Library( String name, String address , Book book)
+	{
+		this.name = name ;
+		this.address = address ;
+		this.book = book ;
+	}
+	
+	
+	public void setBook(Book book)
+	{
+		this.book = book ;
+	}
+	public void setName(String name)
+	{
+		this.name = name ;
+		
+	}
+	public String getName()
+	{
+		return this.name;
+		
+	}
+	
+	public void setAddress(String address)
+	{
+		this.address = address ;
+		
+	}
+	public String getAddress()
+	{
+		return this.address;
+		
+	}
+	
+	
+	public void show()
+	{
+		System.out.println("Name: "+name) ;	
+		System.out.println("Address: "+address) ;				
+		System.out.println("Book Name: "+book.getBookName()+ " Author Name : "+ book.getAuthorName()+ " Number of copy :"+ book.getNoOfCopy()) ;
+	}		
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Book class:
+
+/////////////////////
+
+public class Book
+{
+	public String bookName ;
+	public String authorName ;
+	public int noOfCopy ;
+
+	public Book()
+	{
+		
+	}
+	public Book(String bookName, String authorName, int noOfCopy)
+	{
+		this.bookName = bookName ;
+		this.authorName = authorName ;
+		this.noOfCopy = noOfCopy ;
+	}
+	
+	public void setBookName(String bookName)
+	{
+		this.bookName = bookName ;
+	}
+	public void setAuthorName(String authorName)
+	{
+		this.authorName = authorName ;
+	}
+	public void setNoOfCopy(int noOfCopy)
+	{
+		this.noOfCopy = noOfCopy ;
+	}
+	
+	public String getBookName()
+	{
+		return bookName ;
+	}
+	public String getAuthorName()
+	{
+		return authorName ;
+	}
+	public int getNoOfCopy()
+	{
+		return noOfCopy ;
+	}
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Main class:
+
+/////////////////////
+
+
+public class Main
+
+{
+
+	public static void main(String arg[])
+	
+	{
+		Book book = new Book("Boi ami pori na","Ochena Balok",100) ;
+		
+		Library library = new Library("Nasif", "Airport",book) ;
+	
+		library.show();
+	}	
+	
+}

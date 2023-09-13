@@ -1,0 +1,359 @@
+
+
+   NASIF AHMED
+ID-20-42403-1
+
+
+
+
+
+
+Task-1
+
+******************************
+
+
+
+Person class:
+
+//////////////////
+
+
+public abstract class Person
+{
+	private String name ;
+    private int age ;
+    protected String phoneNo ;
+    protected String email ;
+    protected boolean occupation ;
+	
+	public Person(String name, int age, String phoneNo, String email, boolean occupation)
+	{
+		this.name = name ;
+		this.age = age ;
+		this.phoneNo = phoneNo ;
+		this.email = email ;
+		this.occupation = occupation ;	
+	}
+    public void setName(String name)
+	{
+		this.name = name ;
+	}
+    public void setAge(int age)
+	{
+		this.age = age ;
+	}
+    public String getName()
+	{
+		return name ;
+	}
+    public int getAge()
+	{
+		return age ;
+	}
+    public void setPhoneNo(String PhoneNo)
+	{
+		this.phoneNo = phoneNo ;
+	}
+    public String getPhoneNo()
+	{
+		return phoneNo ;
+	}
+    public void setEmail(String email)
+	{
+		this.email = email ;
+	}
+    public String getEmail()
+	{
+		return email ;
+	}
+	public void setOccupation(boolean occupation)
+	{
+		this.occupation = occupation ;
+	}
+	public boolean getOccupation()
+	{
+		return occupation ;
+	}
+	abstract boolean hasOccupation() ;
+	abstract public void display() ;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Student class:
+
+//////////////////////
+
+public class Student extends Person
+{
+	private String id ;
+    private double cgpa ;
+	
+	public Student(String name, int age, String phoneNo, String email, boolean occupation, String id, double cgpa)
+	{
+		super(name, age, phoneNo, email, occupation) ;
+		this.id = id ;
+		this.cgpa = cgpa ;
+	}
+    public void setId(String id)
+	{
+		this.id = id ;
+	}
+    public void setCgpa(double cgpa)
+	{
+		this.cgpa = cgpa ;
+	}
+    public String getId()
+	{
+		return id ;
+	}
+    public double getCgpa()
+	{
+		return cgpa ;
+	}
+	public boolean hasOccupation() 
+	{
+		System.out.println(" Student has no occupation ") ;
+		return occupation ;
+	}
+	public void display() 
+	{
+		System.out.println(" Name of the student is : " + getName()) ;
+		System.out.println(" Age of the student is : " + getAge()) ;
+		System.out.println(" Phone number of student is : " + getPhoneNo()) ;
+		System.out.println(" Email of student is : " + getEmail()) ;
+		System.out.println(" Occupation of student is : " + getOccupation()) ;
+		System.out.println(" ID of Student is : " + getId()) ;
+		System.out.println(" CGPA of student is : " + getCgpa()) ;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Employee class:
+
+/////////////////////////
+
+
+public class Employee extends Person
+{
+	private String id ;
+    private int salary ;
+	
+	public Employee(String name, int age, String phoneNo, String email, boolean occupation, String id, int salary)
+	{
+		super(name, age, phoneNo, email, occupation) ;
+		this.id = id ;
+		this.salary = salary ;
+	}
+    public void setID(String id)
+	{
+		this.id = id ;
+	}
+    public void setSalary(int salary)
+	{
+		this.salary = salary ;
+	}
+    public String getId()
+	{
+		return id ;
+	}
+    public int getSalary()
+	{
+		return salary ;
+	}
+	public boolean hasOccupation() 
+	{
+		System.out.println(" Employee has occupation ") ;
+		return occupation ;
+	}
+	public void display() 
+	{
+		System.out.println(" Name of the employee is : " + getName()) ;
+		System.out.println(" Age of the employee is : " + getAge()) ;
+		System.out.println(" Phone number of employee is : " + getPhoneNo()) ;
+		System.out.println(" Email of employee is : " + getEmail()) ;
+		System.out.println(" Occupation of employee is : " + getOccupation()) ;
+		System.out.println(" ID of employee is : " + getId()) ;
+		System.out.println(" Salary of employee is : " + getSalary()) ;
+	}
+	
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Start class:
+
+//////////////////
+
+
+public class Start
+{
+	public static void main (String arg[])
+	{
+		Student s1 = new Student ("Nasif", 20, "01631-XXXXXX", "ahmednasif42403@gmail.com", false, "20-42403-1", 4.00) ;
+		s1.hasOccupation() ;
+		s1.display() ;
+		
+		Employee e1 = new Employee ("Fahmida Alam", 26, "01416-XXXXXX", "fahmida@aiub.edu", true, "1800-47-7366", 100000) ;
+		e1.hasOccupation() ;
+		e1.display() ;
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////`
+
+
+
+Task-2
+
+****************************************************
+
+Shape class:
+
+//////////////////
+
+
+public abstract class Shape
+{
+  protected double height;
+  protected double width;
+
+  public Shape ()
+  {
+    System.out.println (" Shape of You ");
+  }
+  public Shape (double height, double width)
+  {
+    this.height = height;
+    this.width = width;
+  }
+  public void setHeight (double height)
+  {
+    this.height = height;
+  }
+  public void setWidth (double width)
+  {
+    this.width = width;
+  }
+  public double getHeight ()
+  {
+    return height;
+  }
+  public double getWidth ()
+  {
+    return width;
+  }
+  public abstract void draw();
+  public abstract void calculateArea();
+  public abstract void show();
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Rectangle class:
+
+//////////////////////
+
+
+public class Rectangle extends Shape
+{
+    public Rectangle()
+    {
+ 
+    }
+    public Rectangle(double height, double width)
+    {
+        super(height, width);
+    }
+	public void draw() 
+	{
+		System.out.println(" Draw a Rectangle ") ;
+	}
+    public void calculateArea()
+    {
+       double area ;
+	   area = height*width ;
+    }
+	public void show() 
+	{
+		System.out.println( " Height of Rectangle " +getHeight()) ;
+		System.out.println( " Width of Rectangle " +getWidth()) ;
+		System.out.println( " Area of Rectangle " +height*width) ;
+	}
+ 
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Triangle class:
+
+///////////////////////////////////
+
+
+public class Triangle extends Shape
+{
+    public Triangle()
+    {
+ 
+    }
+    public Triangle(double height, double width)
+    {
+        super(height, width);
+    } 
+	public void draw() 
+	{
+		System.out.println(" Draw a Triangle ") ;
+	}
+    public void calculateArea()
+    {
+      double area ;
+	  area = 0.5*height*width ;
+    }
+	public void show() 
+	{
+		System.out.println( " Height of Triangle " +getHeight()) ;
+		System.out.println( " Width of Triangle " +getWidth()) ;
+		System.out.println( " Area of Triangle " +0.5*height*width) ;
+	}
+ 
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Main class:
+
+/////////////////////
+
+
+public class Main
+{
+    public static void main(String args[]) 
+    {
+        Shape s1 = new Rectangle() ;
+		s1.setHeight(6.69) ;
+		s1.setWidth(4.44) ;
+		s1.draw() ;
+        s1.calculateArea() ;
+		s1.show() ;
+ 
+        Shape s2 = new Triangle() ;
+		s2.setHeight(7.69) ;
+		s2.setWidth(5.00f) ;
+		s2.draw() ;
+        s2.calculateArea() ; 
+		s2.show() ;
+    }
+}

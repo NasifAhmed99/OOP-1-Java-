@@ -1,0 +1,74 @@
+
+
+NASIF AHMED
+20-42403-1
+
+//////////////////////////////
+
+
+First, I've created a folder called 02-09-20. Saved my Main class inside that folder and created another 
+folder called samplePackage inside 02-09-20 folder. Saved "MySampleClass" inside that class. And created another
+folder inside samplePackage folder caller subSamplePackage. Saved "MySubSampleClass" inside that folder.
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+package samplePackage ;
+
+public class MySampleClass
+{
+	public void helloWord()
+	{
+		System.out.println("Hello from the sample package") ;
+	}
+	public void  info()
+	{
+		System.out.println("Nasif Ahmed, 20-42403-1, Second semester") ;
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+package samplePackage.subSamplePackage ;
+
+public class MySubSampleClass
+{
+	public void display()
+	{
+		System.out.println("Hi! nice to meet you.") ;
+	}
+	public void message()
+	{
+		System.out.println("I'm still doing this code instead of joining my next class which has already started") ;
+	}
+}
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+import samplePackage.MySampleClass ;
+import samplePackage.subSamplePackage.MySubSampleClass ;
+
+public class Main
+{
+	public static void main(String arg[])
+	{
+		MySampleClass s1 = new MySampleClass() ;
+		s1.helloWord() ;
+		s1.info() ;
+		
+		MySubSampleClass sub1 = new MySubSampleClass() ;
+		sub1.display() ;
+		sub1.message() ;
+	}
+}
+
+

@@ -1,0 +1,33 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Order Details
+Shimanto Obokash Resturant
+Coffee - 60tk
+Frencn Fries - 80tk
+Drinks - 25tk
+Total Amount : 165
+Name : Protik Acharjay
+Adress : Rajshahi
+Phone No : 01798141488
+Customer will pay Cash on delivery 
+~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Order Details
+Shimanto Obokash Resturant
+Biriani - 280tk
+Drinks - 25tk
+Total Amount : 305
+Name : Moinul Islam 
+Adress : Bashundhara, Dhaka
+Phone No : 01234556789
+Customer will pay via Bikash 
+~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Order Details
+Bhai Bhai Fastfood
+Pizza - 250tk
+Total Amount : 250
+Name : Nasif
+Adress : dhaka
+Phone No : 012983774466
+Customer will pay Cash on delivery 
+~~~~~~~~~~~~~~~~~~~~~~~~~

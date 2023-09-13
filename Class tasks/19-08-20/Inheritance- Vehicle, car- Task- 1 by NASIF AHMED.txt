@@ -1,0 +1,153 @@
+
+NASIF AHMED
+20-42403-1
+
+
+
+
+
+
+
+Vehicle class:
+
+//////////////////////
+
+public class Vehicle
+{
+	protected int WheelNumber ; 
+    protected String TypeOfVehicles ;
+    protected int NumberOfDoors ;
+    protected int NumberOfWindows ;
+	
+	public Vehicle()
+	{
+		System.out.println("Empty constructor");
+	}
+	public Vehicle(int WheelNumber, String TypeOfVehicles, int NumberOfDoors, int NumberOfWindows)
+	{
+		this.WheelNumber = WheelNumber ;
+		this.TypeOfVehicles = TypeOfVehicles ;
+		this.NumberOfDoors = NumberOfDoors ;
+		this.NumberOfWindows = NumberOfWindows ;
+	}
+	public void setWheelNumber ( int WheelNumber )
+	{
+		this.WheelNumber = WheelNumber ;
+	}
+	public void setTypeOfVehicles ( String TypeOfVehicles )
+	{
+		this.TypeOfVehicles = TypeOfVehicles ;
+	}
+	public void setNumberOfDoors ( int NumberOfDoors)
+	{
+		this.NumberOfDoors = NumberOfDoors ;
+	}
+	public void setNumberOfWindows( int NumberOfWindows )
+	{
+		this.NumberOfWindows = NumberOfWindows ;
+	}
+	public int getWheelNumber ()
+	{
+		return WheelNumber ;
+	}
+	public String getTypeOfVehicles ()
+	{
+		return TypeOfVehicles ;
+	}
+	public int getNumberOfDoors ()
+	{
+		return NumberOfDoors ;
+	}
+	public int getNumberOfWindows ()
+	{
+		return NumberOfWindows ;
+	}
+	
+	public void canBreak()
+	{
+		System.out.println(" Break the car") ;
+	}
+    public void canAccelarate()
+	{
+		System.out.println(" Accelarate the car") ; 
+	}
+    public void canStart()
+	{
+		System.out.println(" start the car ") ;
+	}
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Car class:
+
+////////////////////
+
+public class Car extends Vehicle
+{
+	private String engineNumber ;
+	public String vehicleName ;
+	private String plateNumber ;
+	
+	public Car ()
+	{
+		 System.out.println("Empty constructor");
+	}
+	public Car (int WheelNumber,String TypeOfVehicles,int NumberOfDoors,int NumberOfWindows, String engineNumber, String vehiclename, String plateNumber )
+	{
+		super(WheelNumber, TypeOfVehicles, NumberOfDoors, NumberOfWindows);
+		this.engineNumber = engineNumber ;
+		this.vehicleName = vehicleName ;
+		this.plateNumber = plateNumber ;
+	}
+	public void setengineNumber ( String engineNumber )
+	{
+		this.engineNumber = engineNumber ;
+	}
+	public String getengineNumber ()
+	{
+		return engineNumber ;
+	}
+	public void setplateNumber ( String plateNumber )
+	{
+		this.plateNumber = plateNumber ;
+	}
+	public String getplateNumber ()
+	{
+		return plateNumber ;
+	}
+	public void show ()
+	{
+	    System.out.println("Wheel Number  : " +getWheelNumber());
+        System.out.println("Type Of Vehcle  : " +getTypeOfVehicles());
+        System.out.println("Number Of Dorss  : " +getNumberOfDoors());
+        System.out.println("Number Of Windows   : " +getNumberOfWindows());
+        System.out.println("Engine Number  : " +getengineNumber());
+        System.out.println("Vehicle Name  : " +vehicleName);
+        System.out.println("Plate Number  : " +getplateNumber());
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Main class:
+
+////////////////////////////////
+
+
+public class Main
+{
+	public static void main ( String arg[])
+	{
+		Vehicle v1 = new Vehicle ();
+		v1.canBreak () ;
+		v1.canAccelarate () ;
+		v1.canStart () ;
+		Car c1 = new Car () ;
+		Car c2 = new Car (40,"Super Car",4,4,"Str GT-2","Supra","Dhaka metro KO") ;
+		c2.show ();
+	}
+}
+	

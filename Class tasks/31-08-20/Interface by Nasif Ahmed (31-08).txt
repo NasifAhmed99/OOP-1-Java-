@@ -1,0 +1,78 @@
+
+
+NASIF AHMED
+20-42403-1
+
+
+
+
+
+ITree class:
+
+/////////////////////////////////////
+
+
+public interface ITree 
+{
+   public static final int numberOfTree = 20 ;
+   
+   public abstract void canPlant();
+   
+   public static void message()
+   {
+      System.out.println("We have to plant more tress") ;
+   }
+   
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Land class:
+
+
+////////////////////////
+
+
+public class Land implements ITree
+{
+    public int length ;
+	public Land()
+	{
+	
+	}
+	public Land(int length)
+	{
+	   this.length = length ;
+	}
+	public void calculateArea()
+	{
+	  int area = length*length ;
+	  System.out.println("AreaOfLand: " + area) ;
+	}
+	
+	public void canPlant()
+	{
+	  System.out.println("Plant mango trees") ;
+	}
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Main class:
+
+/////////////////////////
+
+
+class Main
+{
+     public static void main(String arg[])
+	 {
+	    Land l1 = new Land(10) ;
+		l1.canPlant() ;
+		l1.calculateArea() ;
+	 }
+}

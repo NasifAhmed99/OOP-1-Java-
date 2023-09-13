@@ -1,0 +1,155 @@
+Person class:
+
+/////////////////////
+
+
+public class Person
+{
+	public String name ;
+	private int age ;
+	public String bloodGroup ;
+	
+	public Person ()
+	{
+		 
+	}
+	public Person ( String name,int age,String bloodGroup )
+	{
+		this.name = name ;
+		this.age = age ;
+		this.bloodGroup = bloodGroup ;
+	}
+	public void setage ( int age )
+	{
+		this.age = age ;
+	}
+	public int getage() 
+	{
+		return age ;
+	}
+	public void show ()
+	{
+		System.out.println("Person Name is : " +this.name) ;
+	    System.out.println("person Age is : " +getage()+ " Years Old") ;
+        System.out.println("Person Blood Group is : " +this.bloodGroup) ;
+	}
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Employee class:
+
+
+//////////////////////
+
+
+public class Employee extends Person 
+{
+	protected String ID ;
+    public String phoneNo ;
+    public int yearOfExperience ;
+    private float salary ;
+	
+	public Employee ()
+	{
+	
+	}
+	public Employee ( String ID, String phoneNo, int yearOfExperience, float salary )
+	{
+		this.ID = ID ;
+		this.phoneNo = phoneNo ;
+		this.yearOfExperience = yearOfExperience ;
+		this.salary = salary ;
+	}
+	public void setID ( String ID )
+	{
+		this.ID = ID ;
+	}
+	public String getID ()
+	{
+		return ID ;
+	}
+	public void setsalary ( float salary ) 
+	{
+		this.salary = salary ;
+	}
+	public float getsalary ()
+	{
+		return salary ;
+	}
+	public void show ()
+	{
+		System.out.println("Employee ID is : "+getID());
+        System.out.println("Employee phone No is : "+this.phoneNo);
+        System.out.println("Employee year of experience is : "+this.yearOfExperience+" Years");
+        System.out.println("Employee Salary  is : "+getsalary()+ " Taka ");
+	}
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Faculty Class :
+
+////////////////////////
+
+
+public class Faculty extends Employee
+{
+	protected String officeRoomNo ;
+    public String Email ;
+	
+	public Faculty ()
+	{
+	}
+    public Faculty ( String officeRoomNo, String Email )
+    {
+		this.officeRoomNo = officeRoomNo ;
+		this.Email = Email ;
+	}
+	public void setofficeRoomNo ( String OfficeRoomNo )
+	{
+		this.officeRoomNo = officeRoomNo ;
+	}
+	public String getofficeRoomNo ()
+	{
+		return officeRoomNo ;
+	}
+	public void canTakeClass ()
+	{
+		System.out.println (" Faculty can take class " ) ;
+	}
+	public void show () 
+	{
+		System.out.println ( "Faculty office room no : "+getofficeRoomNo () ) ;
+		System.out.println ( "Faculty Email is : "+this.Email ) ;
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Main class:
+
+/////////////////////////
+
+
+
+public class Main
+{
+	public static void main (String arg[] ) 
+	{
+		Person p1 = new Person ("Mr.X",21,"B+") ;
+		p1.show () ;
+		Employee e1 = new Employee ("20-42403-1","017xxxxxxxx",2,6969.69f) ;
+		e1.show () ;
+		Faculty f1 = new Faculty ("D5011","Mr.x696969@aiub.edu") ;
+		f1.show () ;
+	}
+}
